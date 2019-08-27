@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive User Card UI Design Without Using Media Quries</title>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+
+		@import url('http://fonts.googleapis.com/css/family=Open+Sans')
+		
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Open Sans' , sans-serif;
+		}
+
+		.container {
+			position: relative;
+			width: 95%;
+			margin: 100px auto 0;
+			height: auto;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+			grid-template-rows: auto 1fr auto;
+			grid-gap: 20px;
+		}
+
+		.container .card {
+			position: relative;
+			width: 300px;
+			height: 440px;
+			margin: 0 auto;
+			background: #000;
+			overflow: hidden;
+			border-radius: 10px;
+			transition: 0.5s;
+		}
+
+		.container .card:hover {
+			transform: translateY(-20px);
+			box-shadow: 0 20px 20px rgba(0,0,0,.2);
+		}
+
+		.container .card .img-box {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transition: .5s;
+		}
+
+		.container .card:hover .img-box {
+			opacity: 0.5;
+		}
+
+		.container .card .img-box img {
+			width: 100%;
+		}
+
+		.container .card .content {
+			position: absolute;
+			width: 100%;
+			height: 60%;
+			bottom: -100%;
+			padding: 20px;
+			padding-top:60px;
+			box-sizing: border-box;
+			text-align: center;
+		}
+
+		.container .card:hover .content {
+			bottom: 0;
+
+		}
+
+		.container .card:nth-child(1) .content {
+			background: linear-gradient(0deg, #c21833, transparent);
+		}
+
+		.container .card:nth-child(2) .content {
+			background: linear-gradient(0deg, #8012a5, transparent);
+		}
+
+		.container .card:nth-child(3) .content {
+			background: linear-gradient(0deg, #3a414c, transparent);
+		}
+
+		.container .card .content h2 {
+			margin: 0 0 10px;
+			padding: 0;
+			color: #fff;
+			font-size: 20px;
+		}
+
+		.container .card .content h2 span {
+			color: #ffeb3b;
+			font-size: 16px;
+		}
+
+		.container .card .content p {
+			margin: 0;
+			padding: 0;
+			color: #fff;
+			font-size: 16px;
+		}
+
+		.container .card .content ul {
+			display: flex;
+			margin: 20px 0 0;
+			padding: 0;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.container .card .content ul li {
+			list-style: none;
+		}
+
+		.container .card .content ul li a {
+			color: #fff;
+			padding: 0 10px;
+			font-size: 18px;
+			transition: 
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="card">
+			<div class="img-box">
+				<img src="gaurang.jpg">
+			</div>
+			<div class="content">
+				<h2>Gaurang Shetty<br><span>Chief Innovation Catalyst</span></h2>
+				<p></p>
+			<ul>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			</div>
+		</div>
+		<div class="card">
+			<div class="img-box">
+				<img src="raj.jpg">
+			</div>
+			<div class="content">
+				<h2>Raj Dhiravani<br><span>Innovation Catalyst - IT</span></h2>
+				<p></p>
+			<ul>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			</div>
+		</div>
+		<div class="card">
+			<div class="img-box">
+				<img src="prerak.png">
+			</div>
+			<div class="content">
+				<h2>Prerak Gala<br><span>Operations Executive</span></h2>
+				<p></p>
+			<ul>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			</div>
+		</div>
+		<div class="card">
+			<div class="img-box">
+				<img src="bhavna.jpg">
+			</div>
+			<div class="content">
+				<h2>Bhavna Pandya<br><span>Innovation Catalyst - Biology</span></h2>
+				<p></p>
+			<ul>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="card">
+			<div class="img-box">
+				<img src="amit.jpg">
+			</div>
+			<div class="content">
+				<h2>Amit Yadav<br><span>Innovation Catalyst - Electronics</span></h2>
+				<p></p>
+			<ul>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			</div>
+		</div>
+		<div class="card">
+			<div class="img-box">
+				<img src="hetal_doshi.jpg">
+			</div>
+			<div class="content">
+				<h2>Hetal Mundra<br><span>Innovation Catalyst - Biology</span></h2>
+				<p></p>
+			<ul>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			</div>
+		</div>
+		<div class="card">
+			<div class="img-box">
+				<img src="harsh.jpg">
+			</div>
+			<div class="content">
+				<h2>Harsh Vitra<br><span>Web/Software Developer</span></h2>
+				<p></p>
+			<ul>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			</div>
+		</div>
+		<div class="card">
+			<div class="img-box">
+				<img src="savin.jpg">
+			</div>
+			<div class="content">
+				<h2>Savin Shetty<br><span>Events Executive</span></h2>
+				<p></p>
+			<ul>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="card">
+			<div class="img-box">
+				<img src="sangram.png">
+			</div>
+			<div class="content">
+				<h2>Sangram Chavan<br><span>Office Admin</span></h2>
+				<p></p>
+			<ul>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			</div>
+		</div>
+		<div class="card">
+			<div class="img-box">
+				<img src="sachin.png">
+			</div>
+			<div class="content">
+				<h2>Sachin Khot<br><span>Office Admin</span></h2>
+				<p></p>
+			<ul>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			</div>
+		</div>
+		<div class="card">
+			<div class="img-box">
+				<img src="suraj.jpg">
+			</div>
+			<div class="content">
+				<h2>Suraj Mohite<br><span>Office Admin</span></h2>
+				<p>Chief Innovation Catalyst</p>
+			<ul>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			</div>
+		</div>
+		<div class="card">
+			<div class="img-box">
+				<img src="varun.jpg">
+			</div>
+			<div class="content">
+				<h2>Varun kapadia<br><span>Intern</span></h2>
+				<p>Chief Innovation Catalyst</p>
+			<ul>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="card">
+			<div class="img-box">
+				<img src="ayush.jpg">
+			</div>
+			<div class="content">
+				<h2>Ayush Shukla<br><span>Intern</span></h2>
+				<p>Chief Innovation Catalyst</p>
+			<ul>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
